@@ -1,11 +1,12 @@
-package PO;
+package pages;
 
-import org.openqa.selenium.support.FindBy;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
 import static com.codeborne.selenide.Selenide.page;
 
-public class PO_Authorization extends main{
+public class pageAuthorizition {
 
     @FindBy(how = How.XPATH, using = "/html/body/div/section/div/div/section/form/div[1]/div[1]/div/div[1]/input")
     private SelenideElement LoginLane;
@@ -19,21 +20,21 @@ public class PO_Authorization extends main{
     @FindBy(how = How.XPATH, using = "//*[@id='login-form-cancel']")
     private SelenideElement ButtonCantIn;
 
-    public  PO_Authorization ClicButtonLogIn() {
+    public  pageAuthorizition ClicButtonLogIn(String login) {
         LoginLane.click();
-        LoginLane.sendKeys(Login);
-        return page(PO_Authorization.class);
+        LoginLane.sendKeys(login);
+        return page(pageAuthorizition.class);
     }
 
-    public PO_Authorization ClicButtonPassword() {
+    public pageAuthorizition ClicButtonPassword(String password) {
         PasswordLane.click();
-        PasswordLane.sendKeys(Password);
-        return page(PO_Authorization.class);
+        PasswordLane.sendKeys(password);
+        return page(pageAuthorizition.class);
     }
 
-    public PO_MainPage ClicButtonIn() {
+    public pageAuthorizition ClicButtonIn() {
         ButtonLogIn.click();
-        return page(PO_MainPage.class);
+        return page(pageAuthorizition.class);
     }
 
 }
