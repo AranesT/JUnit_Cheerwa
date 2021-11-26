@@ -17,4 +17,9 @@ public class allureStepsDescriptionTest301 {
     public static void showProjStatus() {
         page(pageTestSelenium.class).ShowStatus();
     }
+
+    @Step("Проверка версии проекта")
+    public static void showProjVersion(){
+        page(pageTestSelenium.class).ShowVersion();
+    }
 }

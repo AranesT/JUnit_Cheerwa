@@ -8,8 +8,8 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class allureStepsDescriptionMain {
 
-    @Step ("Открытие главной страницы")
-    public static void openMainURL(){
+    @Step("Открытие главной страницы")
+    public static void openMainURL() {
         open(utils.Configuration.getConfigurationValue("mainPageUrl"));
     }
 

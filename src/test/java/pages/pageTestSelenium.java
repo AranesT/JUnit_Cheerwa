@@ -11,16 +11,17 @@ public class pageTestSelenium {
     @FindBy(how = How.XPATH, using = "//*[@id='status-val']/span")
     private SelenideElement taskStatus;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='versions-field']/span")
+    @FindBy(how = How.XPATH, using = "/html/body/div[1]/section/div[2]/div/div/div/div/div/div/div/div[2]/div[1]/div/div/div/div[1]/div[1]/div[2]/ul/li[5]/div/span")
     private SelenideElement currentVersion;
 
     public pageTestSelenium ShowStatus() {
-        System.out.println("Статус задачи " + ": "+ taskStatus.getText().toString());
+        taskStatus.getText();
         return page(pageTestSelenium.class);
     }
 
     public pageTestSelenium ShowVersion() {
-        System.out.println("Текущая версия: " + currentVersion.getText().toString());
+        currentVersion.getText();
         return page(pageTestSelenium.class);
+
     }
 }

@@ -8,8 +8,8 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class allureStepsDescriptionAuthorizition {
 
-    @Step ("Открытие страницы авторизации")
-    public static void openAuthURL(){
+    @Step("Открытие страницы авторизации")
+    public static void openAuthURL() {
         open(utils.Configuration.getConfigurationValue("pageOfauthorize"));
     }
 

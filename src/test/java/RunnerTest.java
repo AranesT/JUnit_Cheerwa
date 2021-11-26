@@ -3,18 +3,13 @@ import Steps.allureStepsDescriptionAuthorizition;
 import Steps.allureStepsDescriptionCreator;
 import Steps.allureStepsDescriptionMain;
 import Steps.allureStepsDescriptionTest301;
-import io.qameta.allure.Attachment;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 
 public class RunnerTest extends WebDriverInicialization {
-    WebDriver driver;
 
     @Epic("JiraTest")
     @Feature("Testing")
@@ -53,6 +48,7 @@ public class RunnerTest extends WebDriverInicialization {
 
         allureStepsDescriptionTest301.openProjURL();
         allureStepsDescriptionTest301.showProjStatus();
+        allureStepsDescriptionTest301.showProjVersion();
     }
 
     @Epic("JiraTest")
@@ -79,10 +75,6 @@ public class RunnerTest extends WebDriverInicialization {
         allureStepsDescriptionCreator.commentAddBT();
     }
 
-    @Attachment(value = "Failed test screenshot")
-    public byte[] attachScreenshot() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-    }
 
 }
 

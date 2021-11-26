@@ -20,7 +20,7 @@ public class pageAuthorizition {
     @FindBy(how = How.XPATH, using = "//*[@id='login-form-cancel']")
     private SelenideElement ButtonCantIn;
 
-    public  pageAuthorizition ClicButtonLogIn(String login) {
+    public pageAuthorizition ClicButtonLogIn(String login) {
         LoginLane.click();
         LoginLane.sendKeys(login);
         return page(pageAuthorizition.class);

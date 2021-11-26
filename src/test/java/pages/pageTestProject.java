@@ -17,7 +17,6 @@ public class pageTestProject {
 
     @FindBy(how = How.XPATH, using = "//*[@id='content']/div[2]/div/div/div/div/div/div/div/div[2]/div[2]/div/div[1]/div/div[1]/span")
     private SelenideElement amountOfProjects;
-    //Не обнаруживает элемент при использовании коротого xPass
 
     @FindBy(how = How.XPATH, using = "//*[@id='create_link']")
     private SelenideElement createNewTask;
@@ -42,29 +41,27 @@ public class pageTestProject {
 
     @FindBy(how = How.XPATH, using = "//*[@id='action_id_21']")
     private SelenideElement changeTaskStatus1;
-    //Не обнаруживает элемент при использовании коротого xPass
 
     @FindBy(how = How.XPATH, using = "/html/body/div[1]/section/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/ul/li[2]/div/span[1]/span")
     private SelenideElement checkTaskStatus;
-    //Не обнаруживает элемент при использовании коротого xPass
 
-    @FindBy(how = How.XPATH, using = "//*[@id='opsbar-transitions_more']/span" )
+    @FindBy(how = How.XPATH, using = "//*[@id='opsbar-transitions_more']/span")
     private SelenideElement businessProcess;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='action_id_31']/span" )
+    @FindBy(how = How.XPATH, using = "//*[@id='action_id_31']/span")
     private SelenideElement completeTask;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='footer-comment-button']/span[2]" )
+    @FindBy(how = How.XPATH, using = "//*[@id='footer-comment-button']/span[2]")
     private SelenideElement openComments;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='tinymce']/p" )
+    @FindBy(how = How.XPATH, using = "//*[@id='tinymce']/p")
     private SelenideElement commentWriter;
 
     @FindBy(how = How.XPATH, using = "//*[@id='issue-comment-add-submit']")
     private SelenideElement addComment;
 
     public pageTestProject AmountOfProjects() {
-        System.out.println("Количество проектов: " + amountOfProjects.getText().toString());
+        amountOfProjects.getText();
         return page(pageTestProject.class);
     }
 
@@ -119,7 +116,7 @@ public class pageTestProject {
     }
 
     public pageTestProject CheckTaskStatus() {
-        System.out.println("Текущий статус моей задачи: " + checkTaskStatus.getText().toString());
+        checkTaskStatus.getText();
         return page(pageTestProject.class);
     }
 
