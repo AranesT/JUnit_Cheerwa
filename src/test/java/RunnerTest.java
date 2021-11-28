@@ -7,6 +7,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class RunnerTest extends WebDriverInicialization {
@@ -15,6 +16,7 @@ public class RunnerTest extends WebDriverInicialization {
     @Feature("Testing")
     @DisplayName("Авторизация")
     @Description("Авторизация на сайте в качестве пользователя")
+    @Tag("Test1")
     @Test
 
     public void Test1() {
@@ -29,6 +31,7 @@ public class RunnerTest extends WebDriverInicialization {
     @Feature("Testing")
     @DisplayName("Выбор текущего проекта")
     @Description("Выбор проекта Test в качестве активного")
+    @Tag("Test2")
     @Test
 
     public void Test2() {
@@ -42,6 +45,7 @@ public class RunnerTest extends WebDriverInicialization {
     @Feature("Testing")
     @DisplayName("Вывод статуса задачи")
     @Description("Вывод статуса задачи TEST-301")
+    @Tag("Test3")
     @Test
 
     public void Test3() {
@@ -55,6 +59,7 @@ public class RunnerTest extends WebDriverInicialization {
     @Feature("Testing")
     @DisplayName("Создание своей задачи")
     @Description("Создание своей задачи, смена ее статуса и написание комментария")
+    @Tag("Test4")
     @Test
 
     public void Test4() {
